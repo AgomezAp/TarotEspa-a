@@ -49,17 +49,7 @@ export class AdditionalInfoComponent implements OnInit  {
 
   ngOnInit(): void {
     const recopilaData = localStorage.getItem('selectedCards');
-   /*  const encryptedData = localStorage.getItem('paymentData');
-    if (encryptedData) {
-      try {
-        const bytes = CryptoJS.AES.decrypt(encryptedData, this.encryptionKey);
-        const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-        this.descriptionsText = decryptedData.descriptionsText;
-        this.selectedCards = decryptedData.selectedCards;
-      } catch (e) {
-        console.error('Error al desencriptar los datos:', e);
-      }
-    } */
+ 
       if (recopilaData) {
         this.recopila = JSON.parse(recopilaData);
         console.log('Card Details:', this.recopila);
